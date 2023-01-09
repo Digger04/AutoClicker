@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">AutoClicker</string>
+    <string name="accessibility_service_description">for service</string>
+    <string name="accessibility_service_label">Service Auto Click TC</string>
 </resources>
