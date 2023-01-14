@@ -19,6 +19,7 @@ class Home : AppCompatActivity() {
     private fun initView() {
         bt_openmess = findViewById(R.id.bt_openmess)
         bt_openmess.setOnClickListener {
+          //  packageManager.clearInstantAppCookie();
             var OpenMessenger = packageManager.getLaunchIntentForPackage(Constants.MESSENGER_BUNDLE_ID)
 
             if (OpenMessenger != null) {

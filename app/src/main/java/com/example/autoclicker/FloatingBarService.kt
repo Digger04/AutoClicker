@@ -54,7 +54,7 @@ class FloatingBarService: Service() {
 
         windowManagerParams!!.gravity = Gravity.TOP or Gravity.START
         windowManagerParams!!.x = 0
-        windowManagerParams!!.y = 150
+        windowManagerParams!!.y = 500
 
         mWindownManager?.addView(mFloatingWidget, windowManagerParams)
 
