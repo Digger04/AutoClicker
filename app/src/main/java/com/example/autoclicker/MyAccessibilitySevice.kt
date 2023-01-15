@@ -3,10 +3,14 @@ package com.example.autoclicker
 import android.accessibilityservice.AccessibilityService
 import android.accessibilityservice.AccessibilityServiceInfo
 import android.content.Intent
+import android.os.Bundle
 import android.util.Log
 import android.view.accessibility.AccessibilityEvent
 import android.view.accessibility.AccessibilityNodeInfo
 import android.widget.Toast
+import androidx.core.view.accessibility.AccessibilityNodeInfoCompat
+import kotlin.random.Random
+import kotlin.streams.asSequence
 
 class MyAccessibilitySevice: AccessibilityService() {
 
@@ -67,12 +71,41 @@ class MyAccessibilitySevice: AccessibilityService() {
 
             listpeople.performAction(AccessibilityNodeInfo.ACTION_CLICK)
 
-            Thread.sleep(1000)
+            Thread.sleep(2000)
 
-            var  homechat = accessibilityService?.rootInActiveWindow!!.findAccessibilityNodeInfosByText("com.facebook.lite:id/main_layout")
-            if (homechat.isEmpty())
-                return
-            
+            var edtchat = homefblite[0].getChild(0).getChild(7)
+            edtchat.performAction(AccessibilityNodeInfo.ACTION_CLICK)
+
+            Thread.sleep(2000)
+
+            var b = Bundle()
+
+            while (true){
+                Thread.sleep(3000)
+
+                var a = (0..1999).random()
+                val source = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                var text = java.util.Random().ints(10, 5, source.length)
+                    .asSequence()
+                    .map(source::get)
+                    .joinToString("")
+
+                b.putString(AccessibilityNodeInfoCompat.ACTION_ARGUMENT_SET_TEXT_CHARSEQUENCE,text + a)
+
+
+                var lineinput = homefblite[0].getChild(0).getChild(7).getChild(3)
+
+                lineinput.performAction(AccessibilityNodeInfoCompat.ACTION_PASTE)
+                lineinput.performAction(AccessibilityNodeInfoCompat.ACTION_SET_TEXT,b)
+
+                var send = homefblite[0].getChild(0).getChild(7).getChild(5)
+
+                Thread.sleep(1000)
+
+                send.performAction(AccessibilityNodeInfo.ACTION_CLICK)
+            }
+
+
        //     var listmess = root.findAccessibilityNodeInfosByViewId("android:id/content")
        //     var listM = root.findAccessibilityNodeInfosByText("Set Status")
 

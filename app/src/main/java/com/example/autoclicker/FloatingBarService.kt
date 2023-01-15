@@ -70,7 +70,7 @@ class FloatingBarService: Service() {
         }
 
         bt_stop.setOnClickListener {
-            //onDestroy()
+            onDestroy()
         }
     }
 }

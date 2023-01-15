@@ -24,6 +24,13 @@
         android:theme="@style/Theme.AutoClicker"
         tools:targetApi="31">
         <activity
+            android:name=".SelectFun"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".Home"
             android:exported="false">
             <meta-data
@@ -44,17 +51,19 @@
                 android:value="" />
         </activity>
 
-        <service android:name=".FloatingBarService"
+        <service
+            android:name=".FloatingBarService"
             android:enabled="true"
-            android:exported="true"/>
-
-        <service android:name=".MyAccessibilitySevice"
-            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE"
+            android:exported="true" />
+        <service
+            android:name=".MyAccessibilitySevice"
+            android:exported="true"
             android:label="@string/accessibility_service_label"
-            android:exported="true">
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
             <intent-filter>
                 <action android:name="android.accessibilityservice.AccessibilityService" />
             </intent-filter>
+
             <meta-data
                 android:name="android.accessibilityservice"
                 android:resource="@xml/accessibility_service_config" />

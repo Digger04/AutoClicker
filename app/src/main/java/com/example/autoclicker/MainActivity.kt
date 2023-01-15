@@ -6,8 +6,11 @@ import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.Settings
+import android.widget.Button
 import android.widget.Toast
 import androidx.annotation.RequiresApi
+
+private lateinit var bt_connect : Button
 
 class MainActivity : AppCompatActivity() {
 
@@ -20,12 +23,24 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        checkDrawOverOtherApps()
+
+        initView()
+        Connect()
 
     }
 
+    private fun Connect() {
+        bt_connect.setOnClickListener {
+            checkDrawOverOtherApps()
+        }
+    }
+
+    private fun initView() {
+        bt_connect = findViewById(R.id.bt_connect)
+    }
+
     private fun gotoHome() {
-        val intent = Intent(this, Home::class.java)
+        val intent = Intent(this, SelectFun::class.java)
         startActivity(intent)
     }
 
@@ -76,7 +91,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             else -> {
-                if (isAccessibilitySetting()) {
+                if (!isAccessibilitySetting()) {
                     Toast.makeText(this,"Vui lòng cấp quyền", Toast.LENGTH_LONG).show()
                     return
                 }
