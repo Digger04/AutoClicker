@@ -10,19 +10,15 @@
 
     <LinearLayout
         android:layout_width="match_parent"
+        android:layout_margin="10dp"
         android:orientation="horizontal"
+        android:gravity="center_horizontal"
         android:layout_height="wrap_content">
-
-        <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/ic_baseline_menu_24"
-            android:padding="10dp"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Auto Clicker"
+            android:text="Automate All Work"
             android:layout_gravity="center_vertical"
             android:textSize="20sp"
             android:textColor="@color/black"
@@ -35,6 +31,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:gravity="center_horizontal">
 
         <androidx.cardview.widget.CardView
@@ -47,7 +44,7 @@
                 android:layout_width="15dp"
                 android:layout_height="15dp"
                 android:id="@+id/circle_connect"
-                android:src="@drawable/ic_baseline_circle_red"/>
+                android:src="@drawable/ic_baseline_circle"/>
 
         </androidx.cardview.widget.CardView>
 
@@ -63,11 +60,53 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
-            android:text="Not connect sevice"
-            android:textColor="@color/red"
+            android:text="Connected"
+            android:textColor="@color/green"
             android:id="@+id/txt_connect"
             android:textSize="16sp"/>
 
     </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_mess"
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:id="@+id/txt_spammessage"
+            android:text="SPAM MESSAGE FACEBOOK"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="automatically send messages to selected audience with set or random content"
+            android:layout_below="@id/txt_spammessage"
+            android:textColor="@color/grey"
+            android:layout_toLeftOf="@+id/img_right"
+            android:textSize="13sp"
+            android:layout_marginLeft="10dp"/>
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_baseline_chevron_right_24"
+            android:layout_alignParentRight="true"
+            android:padding="5dp"
+            android:layout_centerVertical="true"
+            android:id="@+id/img_right"/>
+
+    </RelativeLayout>
 
 </LinearLayout>

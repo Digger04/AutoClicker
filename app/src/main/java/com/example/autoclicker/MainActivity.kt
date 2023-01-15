@@ -91,7 +91,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             else -> {
-                if (!isAccessibilitySetting()) {
+                if (isAccessibilitySetting()) {
                     Toast.makeText(this,"Vui lòng cấp quyền", Toast.LENGTH_LONG).show()
                     return
                 }
