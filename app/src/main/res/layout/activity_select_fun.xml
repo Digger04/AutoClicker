@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".SelectFun">
+    tools:context=".Activity.SelectFun">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -67,46 +67,465 @@
 
     </LinearLayout>
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:background="@color/white"
-        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Device Id: "
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_marginTop="5dp"
+            android:id="@+id/txt_deviceid"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
-        <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/ic_mess"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:textSize="16sp"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            android:id="@+id/txt_spammessage"
-            android:text="SPAM MESSAGE FACEBOOK"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:layout_marginTop="20dp"
+                android:id="@+id/layout_ads"
+                android:layout_height="wrap_content">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="automatically send messages to selected audience with set or random content"
-            android:layout_below="@id/txt_spammessage"
-            android:textColor="@color/grey"
-            android:layout_toLeftOf="@+id/img_right"
-            android:textSize="13sp"
-            android:layout_marginLeft="10dp"/>
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/ic_ads"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/img_ads"/>
 
-        <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/ic_baseline_chevron_right_24"
-            android:layout_alignParentRight="true"
-            android:padding="5dp"
-            android:layout_centerVertical="true"
-            android:id="@+id/img_right"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/img_ads"
+                    android:layout_toLeftOf="@id/img_right0"
+                    android:layout_centerVertical="true"
+                    android:orientation="vertical">
 
-    </RelativeLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:text="RUN ADS FACEB"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Reach more users at a lower cost and more efficiently"
+                        android:textColor="@color/grey"
+                        android:textSize="13sp"
+                        android:layout_marginLeft="10dp"/>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/ic_baseline_chevron_right_24"
+                    android:layout_alignParentRight="true"
+                    android:padding="5dp"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/img_right0"/>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:layout_marginTop="20dp"
+                android:id="@+id/layout_spammess"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/ic_mess"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/img_mess"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/img_mess"
+                    android:layout_toLeftOf="@id/img_right1"
+                    android:layout_centerVertical="true"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:text="SPAM MESSAGE FACEBOOK"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Automatically send messages to selected audience with set or random content"
+                        android:textColor="@color/grey"
+                        android:textSize="13sp"
+                        android:layout_marginLeft="10dp"/>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/ic_baseline_chevron_right_24"
+                    android:layout_alignParentRight="true"
+                    android:padding="5dp"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/img_right1"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:id="@+id/layout_dropemoji"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/ic_heart"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/img_heart"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/img_heart"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/img_right2"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:text="DROP EMOJI FACEBOOK"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Drop emoji, interact on facebook"
+                        android:textColor="@color/grey"
+                        android:layout_toLeftOf="@+id/img_right"
+                        android:textSize="13sp"
+                        android:layout_marginLeft="10dp"/>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/ic_baseline_chevron_right_24"
+                    android:layout_alignParentRight="true"
+                    android:padding="5dp"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/img_right2"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:layout_marginTop="20dp"
+                android:id="@+id/layout_share"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/ic_share"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/img_sharefb"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/img_sharefb"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/img_right3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:text="AUTOMATICALLY SHARE POST"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Automatically share the article to the relevant audience"
+                        android:textColor="@color/grey"
+                        android:layout_toLeftOf="@+id/img_right"
+                        android:textSize="13sp"
+                        android:layout_marginLeft="10dp"/>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/ic_baseline_chevron_right_24"
+                    android:layout_alignParentRight="true"
+                    android:padding="5dp"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/img_right3"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:layout_marginTop="20dp"
+                android:id="@+id/layout_comment"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/ic_comment"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/img_cmtfb"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/img_cmtfb"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/img_right4"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:text="AUTOMATICALLY COMMENT POST"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Auto comment on pre-set related content"
+                        android:textColor="@color/grey"
+                        android:layout_toLeftOf="@+id/img_right"
+                        android:textSize="13sp"
+                        android:layout_marginLeft="10dp"/>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/ic_baseline_chevron_right_24"
+                    android:layout_alignParentRight="true"
+                    android:padding="5dp"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/img_right4"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:layout_marginTop="20dp"
+                android:id="@+id/layout_siginmail"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/img_mail"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/ic_mail" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/img_mail"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/img_right5"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:text="AUTO SIGIN ACCOUNT GMAIL"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Auto sigin account very by gmail, no use number phone"
+                        android:textColor="@color/grey"
+                        android:layout_toLeftOf="@+id/img_right"
+                        android:textSize="13sp"
+                        android:layout_marginLeft="10dp"/>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/ic_baseline_chevron_right_24"
+                    android:layout_alignParentRight="true"
+                    android:padding="5dp"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/img_right5"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:layout_marginTop="20dp"
+                android:id="@+id/layout_siginfb"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/ic_fb"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/img_fb"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/img_fb"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/img_right6"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:text="AUTO SIGIN ACCOUNT FACEBOOK"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Auto sigin account very by gmail, no use number phone"
+                        android:textColor="@color/grey"
+                        android:layout_toLeftOf="@+id/img_right"
+                        android:textSize="13sp"
+                        android:layout_marginLeft="10dp"/>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/ic_baseline_chevron_right_24"
+                    android:layout_alignParentRight="true"
+                    android:padding="5dp"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/img_right6"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:layout_marginTop="20dp"
+                android:id="@+id/layout_sigininsta"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/ic_insta"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/img_insta"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/img_insta"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/img_right7"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:text="AUTO SIGIN ACCOUNT INSTAGRAM"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Auto sigin account very by gmail, no use number phone"
+                        android:textColor="@color/grey"
+                        android:layout_toLeftOf="@+id/img_right"
+                        android:textSize="13sp"
+                        android:layout_marginLeft="10dp"/>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/ic_baseline_chevron_right_24"
+                    android:layout_alignParentRight="true"
+                    android:padding="5dp"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/img_right7"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </LinearLayout>

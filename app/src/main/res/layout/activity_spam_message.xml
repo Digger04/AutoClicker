@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".Activity.SpamMessage">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            android:padding="10dp"
+            android:id="@+id/img_back"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Spam Message With Facebook Lite"
+            android:textColor="@color/grey"
+            android:textStyle="bold"
+            android:layout_gravity="center_vertical"
+            android:ellipsize="marquee"
+            android:focusableInTouchMode="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:id="@+id/txt_title"
+            android:textSize="20sp"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Spam with line list people"
+                android:textSize="16sp"
+                android:padding="5dp"
+                android:checked="true"
+                android:button="@drawable/custom_checkbox_filter"
+                android:id="@+id/checkbox_listpeople"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ordinal number in chat list"
+                    android:textColor="@color/grey"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_horizontal"
+                    android:textSize="16sp"/>
+
+                <EditText
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:hint="number"
+                    android:textColorHint="@color/greybd"
+                    android:backgroundTint="@color/grey"
+                    android:layout_marginTop="5dp"
+                    android:inputType="number"
+                    android:textColor="@color/grey"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Message content"
+                    android:textColor="@color/grey"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16sp"/>
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Random"
+                    android:textColor="@color/grey"
+                    android:textSize="16sp"
+                    android:checked="true"
+                    android:layout_marginTop="10dp"
+                    android:button="@drawable/custom_checkbox_filter"
+                    android:layout_marginLeft="10dp"
+                    android:padding="5dp"
+                    android:id="@+id/checkbox_content_random"/>
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Custom"
+                    android:textColor="@color/grey"
+                    android:textSize="16sp"
+                    android:layout_marginTop="10dp"
+                    android:button="@drawable/custom_checkbox_filter"
+                    android:layout_marginLeft="10dp"
+                    android:padding="5dp"
+                    android:id="@+id/checkbox_content_custom"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                android:id="@+id/layout_linecontent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Content message"
+                    android:textColor="@color/grey"
+                    android:textSize="16sp"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/grey"
+                    android:layout_marginLeft="10dp"
+                    android:hint="Content"
+                    android:textColor="@color/grey"
+                    android:textColorHint="@color/greybd"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Number message"
+                    android:textSize="16sp"
+                    android:textColor="@color/grey"/>
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Unlimit"
+                    android:textColor="@color/grey"
+                    android:button="@drawable/custom_checkbox_filter"
+                    android:layout_marginLeft="10dp"
+                    android:padding="5dp"
+                    android:checked="true"
+                    android:id="@+id/checkbox_unlimit"/>
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Limit"
+                    android:textColor="@color/grey"
+                    android:button="@drawable/custom_checkbox_filter"
+                    android:layout_marginLeft="10dp"
+                    android:padding="5dp"
+                    android:id="@+id/checkbox_limit"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                android:id="@+id/layout_numbermess"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Number"
+                    android:textColor="@color/grey"
+                    android:textSize="16sp"/>
+
+                <EditText
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/grey"
+                    android:layout_marginLeft="10dp"
+                    android:hint="Number"
+                    android:gravity="center_horizontal"
+                    android:inputType="number"
+                    android:textColor="@color/grey"
+                    android:textColorHint="@color/greybd"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:layout_centerHorizontal="true">
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/bt_star"
+                android:background="@color/blue"
+                android:text="Star Spam"/>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+</LinearLayout>

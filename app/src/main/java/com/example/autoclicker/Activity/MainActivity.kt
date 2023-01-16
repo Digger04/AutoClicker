@@ -1,14 +1,15 @@
-package com.example.autoclicker
+package com.example.autoclicker.Activity
 
 import android.content.Intent
 import android.net.Uri
-import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.Settings
 import android.widget.Button
 import android.widget.Toast
-import androidx.annotation.RequiresApi
+import androidx.core.content.ContextCompat
+import com.example.autoclicker.Activity.SelectFun
+import com.example.autoclicker.R
 
 private lateinit var bt_connect : Button
 
@@ -26,7 +27,10 @@ class MainActivity : AppCompatActivity() {
 
         initView()
         Connect()
-
+        setStatusbar()
+    }
+    private fun setStatusbar() {
+        window.statusBarColor = ContextCompat.getColor(this, R.color.white)
     }
 
     private fun Connect() {

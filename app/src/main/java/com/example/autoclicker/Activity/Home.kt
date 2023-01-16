@@ -1,10 +1,14 @@
-package com.example.autoclicker
+package com.example.autoclicker.Activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
+import androidx.core.content.ContextCompat
+import com.example.autoclicker.PackageName.Constants
+import com.example.autoclicker.R
+import com.example.autoclicker.Service.FloatingBarService
 
 private lateinit var bt_openmess : Button
 
@@ -14,6 +18,11 @@ class Home : AppCompatActivity() {
         setContentView(R.layout.activity_home)
 
         initView()
+        setStatusbar()
+    }
+
+    private fun setStatusbar() {
+        window.statusBarColor = ContextCompat.getColor(this, R.color.white)
     }
 
     private fun initView() {

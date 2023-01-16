@@ -1,4 +1,4 @@
-package com.example.autoclicker
+package com.example.autoclicker.PackageName
 
 class Constants {
     companion object {

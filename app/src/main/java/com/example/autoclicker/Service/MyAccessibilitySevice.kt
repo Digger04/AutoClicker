@@ -1,7 +1,6 @@
-package com.example.autoclicker
+package com.example.autoclicker.Service
 
 import android.accessibilityservice.AccessibilityService
-import android.accessibilityservice.AccessibilityServiceInfo
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -9,16 +8,15 @@ import android.view.accessibility.AccessibilityEvent
 import android.view.accessibility.AccessibilityNodeInfo
 import android.widget.Toast
 import androidx.core.view.accessibility.AccessibilityNodeInfoCompat
-import kotlin.random.Random
 import kotlin.streams.asSequence
 
 class MyAccessibilitySevice: AccessibilityService() {
 
     companion object {
-        private var accessibilityService: MyAccessibilitySevice ? = null
+        private var accessibilityService: MyAccessibilitySevice? = null
 
         private fun setService(s: MyAccessibilitySevice) {
-            this.accessibilityService = s
+            accessibilityService = s
         }
     }
 
@@ -82,15 +80,13 @@ class MyAccessibilitySevice: AccessibilityService() {
 
             while (true){
                 Thread.sleep(3000)
-
-                var a = (0..1999).random()
-                val source = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                val source = "abcdefghijklmnopqrstuvwxyz123456890"
                 var text = java.util.Random().ints(10, 5, source.length)
                     .asSequence()
                     .map(source::get)
                     .joinToString("")
 
-                b.putString(AccessibilityNodeInfoCompat.ACTION_ARGUMENT_SET_TEXT_CHARSEQUENCE,text + a)
+                b.putString(AccessibilityNodeInfoCompat.ACTION_ARGUMENT_SET_TEXT_CHARSEQUENCE,text)
 
 
                 var lineinput = homefblite[0].getChild(0).getChild(7).getChild(3)
